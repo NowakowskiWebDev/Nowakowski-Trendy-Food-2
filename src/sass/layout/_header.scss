@@ -1,0 +1,32 @@
+.header {
+    grid-area: header;
+
+    text-align: center;
+
+    &__heading {
+        margin: 2rem 0 1rem;
+        font-size: 2rem;
+        font-family: 'Lato-Bold';
+    }
+
+    &__paragraph {
+        font-size: $default-font-size;
+        margin-bottom: 2rem;
+    }
+}
+
+.search {
+    &__input {
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: .5rem 1rem;
+        font-size: $default-font-size;
+        width: 15rem;
+        border: 1px solid $color-black;
+    }
+
+    &__buttons-nav {
+        margin: 2rem 0;
+    }
+}

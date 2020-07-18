@@ -1,0 +1,8 @@
+.footer {
+    grid-area: footer;
+
+    &__paragraph {
+        font-size: $default-font-size;
+        margin: 2rem 0;
+    }
+}
