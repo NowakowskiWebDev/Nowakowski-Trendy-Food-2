@@ -1,32 +1,74 @@
 .header {
     grid-area: header;
-
     text-align: center;
+    color: $color-gray;
 
     &__heading {
         margin: 2rem 0 1rem;
-        font-size: 2rem;
+        font-size: 4rem;
         font-family: 'Lato-Bold';
+        color: #F48982;
     }
 
     &__paragraph {
         font-size: $default-font-size;
         margin-bottom: 2rem;
+        color: inherit;
     }
 }
 
 .search {
+    position: relative;
+    display: inline-block;
+    margin: 3rem;
+
+    &__label {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        opacity: 1;
+        transition: all .8s;
+        transform: translateY(-2.6rem);
+    }
+
     &__input {
         border: none;
         outline: none;
         border-radius: 10px;
         padding: .5rem 1rem;
         font-size: $default-font-size;
-        width: 15rem;
-        border: 1px solid $color-black;
+        width: 30rem;
+        border: 1px solid $color-gray-1;
+        color: $color-gray;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 .5rem .3rem rgba($color-black, .1)
+        }
+    }
+
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: $color-gray;
+        transition: transform 1s linear;
     }
 
     &__buttons-nav {
         margin: 2rem 0;
+
+        &>*:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        &>* {
+            background-color: $color-yellow;
+            padding: 1.2rem 1.7rem;
+            border-radius: 20px;
+            color: $color-gray;
+        }
     }
 }

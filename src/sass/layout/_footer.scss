@@ -2,7 +2,8 @@
     grid-area: footer;
 
     &__paragraph {
-        font-size: $default-font-size;
+        font-size: 1.5rem;
+        font-family: 'Lato-Bold';
         margin: 2rem 0;
     }
 }
