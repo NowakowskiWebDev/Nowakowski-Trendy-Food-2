@@ -59,16 +59,13 @@ elements.productLists.addEventListener("click", function (event) {
 
     const idItem = element.parentNode.parentNode.dataset.id;
 
-    const checkEmpty = () => {
-        if (idItem) elements.nameValues.style.display = 'none';
-    }
+
 
     switch (element.dataset.function) {
         case 'buy':
             console.log(element);
             break;
         case 'delete':
-            checkEmpty()
             deleteItem(event.target, idItem)
             break;
         case 'edit':
