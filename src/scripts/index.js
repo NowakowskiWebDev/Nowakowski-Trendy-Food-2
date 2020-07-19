@@ -34,7 +34,8 @@ elements.productsBtn.addEventListener('click', () => {
     elements.creationSection.style.display = 'block';
     elements.productLists.style.display = 'block';
     // if (elements.categoryContainer) elements.categoryContainer.style.display = 'none'
-    elements.nameValues.style.display = 'flex';
+    elements.nameValues.style.display = 'none';
+    elements.paragWarning.innerHTML = '';
 })
 
 elements.categoryBtn.addEventListener('click', () => {
@@ -58,11 +59,16 @@ elements.productLists.addEventListener("click", function (event) {
 
     const idItem = element.parentNode.parentNode.dataset.id;
 
+    const checkEmpty = () => {
+        if (idItem) elements.nameValues.style.display = 'none';
+    }
+
     switch (element.dataset.function) {
         case 'buy':
             console.log(element);
             break;
         case 'delete':
+            checkEmpty()
             deleteItem(event.target, idItem)
             break;
         case 'edit':

@@ -1,0 +1,18 @@
+<!doctype html><html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/main.min.css"><script>function myFunction() {
+
+            const getProduct = () => {
+                return products = document.querySelectorAll('#product-name');
+            }
+            const input = document.getElementById('search__input');
+            const p = getProduct();
+            const filter = input.value.toUpperCase();
+            const ul = document.getElementById('product__lists');
+            const li = ul.getElementsByTagName("li");
+            for (i = 0; i < p.length; i++) {
+                if (p[i].textContent.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }</script><title>Shopping list</title></head><body><div class="container"><header class="header"><h1 class="header__heading">Lista zakupów</h1><p class="header__paragraph">Aplikacja internetowa umożliwiająca zrobienie listy zakupów z podziałem na kategorie</p><form class="search"><input id="search__input" class="search__input" placeholder="Wpisz produkt" onkeyup="myFunction()"> <label for="search__label" class="search__label">Wyszukaj swój produkt z łatwością</label></form><div class="search__buttons-nav"><button class="btn btn--products">Produkty</button> <button class="btn btn--category">Kategorie</button> <button class="btn btn--week">Tygodniowe zakupy</button></div></header><main class="main"><section class="creation-section"><form class="product__creation"><div class="product__group"><input id="product__input--count" class="product__input product__input--count" type="number" placeholder="Ilość albo waga"> <label class="product__label" for="product__input--count">Ilość albo waga</label></div><select class="product__select" name="unit" id="unit"><option value="">--Jednostka--</option><option value="kg">kg</option><option value="g">g</option><option value="litr">l</option><option value="number">Ilość</option></select><div class="product__group"><input id="product__input--name" class="product__input product__input--name" placeholder="Nazwa produktu"> <label class="product__label" for="product__input--name">Nazwa produktu</label></div><div class="product__group"><input id="product__input--category" class="product__input product__input--category" placeholder="Nazwa kategorii"> <label class="product__label" for="product__input--category">Nazwa kategorii</label></div><button class="btn btn--creation-add">Dodaj</button></form><p class="creation-section__warning"></p></section><section class="product-section"><div class="product__nameValues"><p class="text-count">Liczba</p><p class="text-unit">Waga/Ilość</p><p class="text-name">Nazwa</p><p class="text-category">Kategoria</p></div><ul id="product__lists" class="product__lists"></ul></section><section class="category"><div class="category-container"></div></section></main><footer class="footer"><p class="footer__paragraph">&copy; Łukasz Nowakowski</p></footer></div><script src="js/bundle.js"></script></body></html>
