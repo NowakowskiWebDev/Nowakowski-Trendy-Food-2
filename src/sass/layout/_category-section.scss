@@ -1,0 +1,29 @@
+.category {
+
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    &__box {
+        display: inline-block;
+        margin: 2rem;
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+    }
+
+    &__lists {
+        margin: 2rem auto;
+    }
+
+    &__item {
+        margin: .5rem 0;
+        font-size: $default-font-size;
+    }
+
+}

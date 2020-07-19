@@ -49,44 +49,49 @@
             <section class="creation-section">
                 <form class="product__creation">
                     <div class="product__group">
-                        <label class="product__label" for="product__input--count">Wpisz ilość albo
-                            wagę</label>
                         <input id="product__input--count" class="product__input product__input--count" type="number"
-                            placeholder="Wpisz ilość albo wagę">
+                            placeholder="Ilość albo waga">
+                        <label class="product__label" for="product__input--count">Ilość albo waga</label>
                     </div>
                     <select class="product__select" name="unit" id="unit">
-                        <option value="">--Proszę wybrać jednostkę--</option>
+                        <option value="">--Jednostka--</option>
                         <option value="kg">kg</option>
                         <option value="g">g</option>
                         <option value="litr">l</option>
                         <option value="number">Ilość</option>
                     </select>
                     <div class="product__group">
-                        <label class="product__label" for="product__input--name">Wpisz nazwę dodawanego
-                            produktu</label>
                         <input id="product__input--name" class="product__input product__input--name" type="text"
-                            placeholder="Wpisz nazwe produktu">
+                            placeholder="Nazwa produktu">
+                        <label class="product__label" for="product__input--name">Nazwa produktu</label>
+
                     </div>
                     <div class="product__group">
-                        <label class="product__label" for="product__input--category">Wpisz kategorię dodawanego
-                            produktu</label>
                         <input id="product__input--category" class="product__input product__input--category" type="text"
-                            placeholder="Wpisz nazwe produktu">
+                            placeholder="Nazwa kategorii">
+                        <label class="product__label" for="product__input--category">Nazwa kategorii</label>
+
                     </div>
                     <button class="btn btn--creation-add">Dodaj</button>
                 </form>
                 <p class="creation-section__warning"></p>
             </section>
             <section class="product-section">
+                <div class="product__nameValues">
+                    <p class="text-count">Liczba</p>
+                    <p class="text-unit">Waga/Ilość</p>
+                    <p class="text-name">Nazwa</p>
+                    <p class="text-category">Kategoria</p>
+                </div>
                 <ul id="product__lists" class="product__lists">
-                    <li class="product__item">
+                    <!-- <li class="product__item">
                         <p class="product__item-count">10</p>
                         <p class="product__item-unit">gram</p>
                         <p class="product__item-name" id="product-name">drożdży</p>
                         <p class="product__item-category">kategoria</p>
                         <div class="product__item-line"></div>
                         <div class="btn-product__group">
-                            <button class="btn btn--click btn--product-item-done">Kupione</button>
+                            <button data class="btn btn--click btn--product-item-done">Kupione</button>
                             <button class="btn btn--click btn--product-item-remove">Usuń</button>
                             <button class="btn btn--click btn--product-item-edit">Edytuj</button>
                         </div>
@@ -114,9 +119,17 @@
                             <button class="btn btn--click btn--product-item-remove">Usuń</button>
                             <button class="btn btn--click btn--product-item-edit">Edytuj</button>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </section>
+            <section class="category">
+
+                <div class="category-container">
+
+                </div>
+
+            </section>
+
         </main>
 
         <footer class="footer">
